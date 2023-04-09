@@ -13,6 +13,81 @@ body {
   background-color: $Pearl-White;
 }
 
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: initial;
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.hero-area {
+  height: 100vh;
+  background-color: #b5caee;
+  background-image: linear-gradient(
+      rgba(29, 38, 113, 0.8),
+      rgba(195, 55, 100, 0.8)
+    ),
+    url("/images/hero-bg1.jpg");
+  background-size: cover;
+}
+
+.custom-nav-container {
+  background-color: transparent !important;
+  padding: 0;
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        padding: 45px 15px 15px;
+        color: #ffffff;
+        text-align: center;
+        position: relative;
+        text-transform: uppercase;
+      }
+
+      &:hover,
+      &.active {
+        .nav-link {
+          background-color: $Orangeish-red;
+        }
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: $VeryDark-Gray;
+  color: #fff;
+
+  h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -10px;
+  }
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
 .event-content {
   h2 {
     line-height: 1.2;
@@ -68,5 +143,43 @@ body {
     color: $Yellow;
     background-color: $Pearl-White;
     border-color: $Yellow;
+  }
+}
+
+.slides {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $Pearl-White;
+
+  #carouselExampleIndicators {
+    width: 100%;
+  }
+
+  .detail-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 0.7rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 15px;
+      border: 1px solid rgba($color: $Pearl-White, $alpha: 0.2);
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+
+    a {
+      @include hero_btn($Orangeish-red, $Pearl-White, 10px, 45px);
+      margin-top: 35px;
+    }
+    margin-bottom: 110px;
   }
 }

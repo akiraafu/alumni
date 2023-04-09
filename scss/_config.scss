@@ -9,3 +9,16 @@ $Yellow: #f6c445;
 $Pearl-White: #f3f3f3;
 $VeryDark-Gray: #212427;
 $Shadow: rgba(0, 0, 0, 0.05);
+
+@mixin hero_btn($col1, $col2, $pad1, $pad2) {
+  display: inline-block;
+  padding: $pad1 $pad2;
+  background-color: $col1;
+  border: 1px solid $col1;
+  color: $col2;
+
+  &:hover {
+    background-color: transparent;
+    color: $col1;
+  }
+}
