@@ -88,63 +88,80 @@ a:focus {
   }
 }
 
-.event-content {
-  h2 {
-    line-height: 1.2;
-    margin: 14px 0;
-    font-size: 30px;
-    text-transform: uppercase;
+.upcoming-event {
+  background-color: #eeeeee;
+  .event-content {
+    h2 {
+      line-height: 1.2;
+      margin: 14px 0;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+  }
+
+  .event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $Light-gray-blue;
+    height: 110px;
+    margin-bottom: 20px;
+    gap: 0;
+    text-align: center;
+
+    :first-child {
+      display: block;
+      width: 70px;
+      padding: 5px 10px 0 10px;
+      font-weight: 600;
+      font-size: 30px;
+    }
+
+    :nth-child(2) {
+      display: block;
+      padding: 0 10px 5px 10px;
+      width: 70px;
+    }
+
+    :nth-child(3) {
+      display: block;
+      width: 70px;
+      padding: 5px 12px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: $Orangeish-red;
+    border: 1px solid $Orangeish-red;
+    color: $Pearl-White !important;
+    margin-top: 35px;
+
+    &:hover {
+      background-color: transparent;
+      color: $Orangeish-red !important;
+    }
   }
 }
 
-.event-date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: $Light-gray-blue;
-  height: 110px;
-  margin-bottom: 20px;
-  gap: 0;
-  text-align: center;
+// .join-btn {
+//   width: 150px;
+//   height: auto;
+//   line-height: 50px;
+//   color: #fff;
+//   border: 1px solid transparent;
+//   font-size: 18px;
+//   background-color: $Yellow;
 
-  :first-child {
-    display: block;
-    width: 70px;
-    padding: 5px 10px 0 10px;
-    font-weight: 600;
-    font-size: 30px;
-  }
-
-  :nth-child(2) {
-    display: block;
-    padding: 0 10px 5px 10px;
-    width: 70px;
-  }
-
-  :nth-child(3) {
-    display: block;
-    width: 70px;
-    padding: 5px 12px;
-    background: rgba(0, 0, 0, 0.3);
-  }
-}
-
-.join-btn {
-  width: 150px;
-  height: auto;
-  line-height: 50px;
-  color: #fff;
-  border: 1px solid transparent;
-  font-size: 18px;
-  background-color: $Yellow;
-
-  &:hover {
-    color: $Yellow;
-    background-color: $Pearl-White;
-    border-color: $Yellow;
-  }
-}
+//   &:hover {
+//     color: $Yellow;
+//     background-color: $Pearl-White;
+//     border-color: $Yellow;
+//   }
+// }
 
 .slides {
   width: 100%;
@@ -181,5 +198,32 @@ a:focus {
       margin-top: 35px;
     }
     margin-bottom: 110px;
+  }
+}
+
+.aboutus {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  .aboutus-img-one {
+    border-radius: 30% 70% 67% 33% / 30% 30% 70% 70%;
+    box-shadow: -10vmin 10vmin rgba(214, 143, 143, 0.2);
+  }
+
+  .about-us-detail {
+    text-align: justify;
+  }
+}
+
+.activities {
+  background-color: #eeeeee;
+  .row {
+    .col {
+      background-color: $Pearl-White;
+      border-radius: 5px;
+    }
+    a {
+      @include hero_btn($Orangeish-red, $Pearl-White, 10px, 45px);
+      margin: 35px auto;
+    }
   }
 }

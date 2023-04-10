@@ -11973,14 +11973,16 @@ a:focus {
   color: #fff;
 }
 
-.event-content h2, .event-content .h2 {
+.upcoming-event {
+  background-color: #eeeeee;
+}
+.upcoming-event .event-content h2, .upcoming-event .event-content .h2 {
   line-height: 1.2;
   margin: 14px 0;
   font-size: 30px;
   text-transform: uppercase;
 }
-
-.event-date {
+.upcoming-event .event-date {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11991,38 +11993,35 @@ a:focus {
   gap: 0;
   text-align: center;
 }
-.event-date :first-child {
+.upcoming-event .event-date :first-child {
   display: block;
   width: 70px;
   padding: 5px 10px 0 10px;
   font-weight: 600;
   font-size: 30px;
 }
-.event-date :nth-child(2) {
+.upcoming-event .event-date :nth-child(2) {
   display: block;
   padding: 0 10px 5px 10px;
   width: 70px;
 }
-.event-date :nth-child(3) {
+.upcoming-event .event-date :nth-child(3) {
   display: block;
   width: 70px;
   padding: 5px 12px;
   background: rgba(0, 0, 0, 0.3);
 }
-
-.join-btn {
-  width: 150px;
-  height: auto;
-  line-height: 50px;
-  color: #fff;
-  border: 1px solid transparent;
-  font-size: 18px;
-  background-color: #f6c445;
+.upcoming-event a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #e45f2b;
+  border: 1px solid #e45f2b;
+  color: #f3f3f3 !important;
+  margin-top: 35px;
 }
-.join-btn:hover {
-  color: #f6c445;
-  background-color: #f3f3f3;
-  border-color: #f6c445;
+.upcoming-event a:hover {
+  background-color: transparent;
+  color: #e45f2b !important;
 }
 
 .slides {
@@ -12063,6 +12062,38 @@ a:focus {
   margin-top: 35px;
 }
 .slides .detail-box a:hover {
+  background-color: transparent;
+  color: #e45f2b;
+}
+
+.aboutus {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.aboutus .aboutus-img-one {
+  border-radius: 30% 70% 67% 33%/30% 30% 70% 70%;
+  box-shadow: -10vmin 10vmin rgba(214, 143, 143, 0.2);
+}
+.aboutus .about-us-detail {
+  text-align: justify;
+}
+
+.activities {
+  background-color: #eeeeee;
+}
+.activities .row .col {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+.activities .row a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #e45f2b;
+  border: 1px solid #e45f2b;
+  color: #f3f3f3;
+  margin: 35px auto;
+}
+.activities .row a:hover {
   background-color: transparent;
   color: #e45f2b;
 }/*# sourceMappingURL=styles.css.map */
