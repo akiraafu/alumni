@@ -11930,6 +11930,10 @@ a:focus {
   box-shadow: none;
 }
 
+.tag {
+  color: gray;
+}
+
 .hero-area {
   height: 100vh;
   background-color: #b5caee;
@@ -12068,7 +12072,7 @@ a:focus {
 
 .aboutus {
   margin-top: 50px;
-  margin-bottom: 80px;
+  height: 85vh;
 }
 .aboutus .aboutus-img-one {
   border-radius: 30% 70% 67% 33%/30% 30% 70% 70%;
@@ -12081,11 +12085,14 @@ a:focus {
 .activities {
   background-color: #eeeeee;
 }
+.activities .row h3, .activities .row .h3 {
+  font-size: 25px;
+}
 .activities .row .col {
   background-color: #f3f3f3;
   border-radius: 5px;
 }
-.activities .row a {
+.activities .row .col a {
   display: inline-block;
   padding: 10px 45px;
   background-color: #e45f2b;
@@ -12093,7 +12100,73 @@ a:focus {
   color: #f3f3f3;
   margin: 35px auto;
 }
-.activities .row a:hover {
+.activities .row .col a:hover {
+  background-color: transparent;
+  color: #e45f2b;
+}
+.activities .row .cards {
+  height: 450px;
+  overflow-y: scroll;
+}
+.activities .row .cards .card {
+  border: none;
+  background-color: inherit;
+}
+.activities .row .cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.activities .row .cards .card .card-body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.activities .row .cards .card .card-body .card-title {
+  font-size: 1rem;
+}
+.activities .row .cards .card .card-body .card-text {
+  font-size: 14px;
+}
+
+.newsletter {
+  width: 100%;
+  height: 80vh;
+  background-image: url("/images/bg-newsletter.jpg");
+  color: #f3f3f3;
+}
+.newsletter form {
+  width: 500px;
+}
+.newsletter form input {
+  width: 100%;
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid lightgray;
+  outline: 0;
+  color: #f3f3f3;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.newsletter form input::placeholder {
+  color: lightgray;
+}
+.newsletter form input:focus {
+  padding-bottom: 6px;
+  font-weight: bold;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #f6c445, #72fa93);
+  border-image-slice: 1;
+}
+.newsletter form a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #e45f2b;
+  border: 1px solid #e45f2b;
+  color: #f3f3f3;
+  margin-top: 35px;
+}
+.newsletter form a:hover {
   background-color: transparent;
   color: #e45f2b;
 }/*# sourceMappingURL=styles.css.map */
