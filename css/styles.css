@@ -11925,12 +11925,6 @@ a:focus {
   color: #e45f2b;
 }
 
-.btn,
-.btn:focus {
-  outline: none !important;
-  box-shadow: none;
-}
-
 .button {
   display: inline-block;
   padding: 15px 55px;
@@ -12095,22 +12089,13 @@ a:focus {
   font-weight: bold;
   text-transform: uppercase;
   padding: 15px;
-  border: 1px solid rgba(243, 243, 243, 0.2);
+  border-bottom: 1px solid rgba(243, 243, 243, 0.2);
 }
 .slides .detail-box h2, .slides .detail-box .h2 {
   margin-top: 2rem;
 }
-.slides .detail-box a {
-  display: inline-block;
-  padding: 10px 45px;
-  background-color: #e45f2b;
-  border: 1px solid #e45f2b;
-  color: #f3f3f3;
+.slides .detail-box .button {
   margin-top: 35px;
-}
-.slides .detail-box a:hover {
-  background-color: transparent;
-  color: #e45f2b;
 }
 
 .aboutus {
@@ -12136,16 +12121,7 @@ a:focus {
   border-radius: 5px;
 }
 .activities .row .col .button {
-  display: inline-block;
-  padding: 10px 45px;
-  background-color: #e45f2b;
-  border: 1px solid #e45f2b;
-  color: #f3f3f3;
   margin: 35px auto;
-}
-.activities .row .col .button:hover {
-  background-color: transparent;
-  color: #e45f2b;
 }
 .activities .row .col a {
   color: inherit;
@@ -12232,17 +12208,8 @@ a:focus {
   border-image: linear-gradient(to right, #f6c445, #72fa93);
   border-image-slice: 1;
 }
-.newsletter form a {
-  display: inline-block;
-  padding: 10px 45px;
-  background-color: #e45f2b;
-  border: 1px solid #e45f2b;
-  color: #f3f3f3;
+.newsletter form .button {
   margin-top: 35px;
-}
-.newsletter form a:hover {
-  background-color: transparent;
-  color: #e45f2b;
 }
 
 footer {
@@ -12443,4 +12410,49 @@ footer .copyright {
 }
 .jobs .box p {
   margin: 0;
+}
+
+.detail-page .title-area {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+  background-size: 400% 400%;
+  position: relative;
+  animation: animate 7.5s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-page .title-area h1, .detail-page .title-area .h1 {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  font-size: 40px;
+  border-radius: 10px;
+}
+.detail-page .title-area .button {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  color: #fff;
+  background: transparent;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+.detail-page .title-area .button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff !important;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }/*# sourceMappingURL=styles.css.map */
