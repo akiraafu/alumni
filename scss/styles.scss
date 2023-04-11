@@ -583,59 +583,102 @@ footer {
   }
 }
 
-.event-page {
-  .event-box {
+.box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbcbcb;
+  margin: 15px 0;
+  border-radius: 5px;
+
+  > div {
+    flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    border: 1px solid #cbcbcb;
-    margin: 15px 0;
-    border-radius: 5px;
+    justify-content: center;
+    margin: 10px;
+  }
 
-    > div {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 10px;
+  .event-image {
+    img {
+      width: 100%;
+      aspect-ratio: 5/ 2;
+      object-fit: cover;
+    }
+  }
+  .detail-box {
+    border-left: 1px solid #b0b0b0;
+    border-right: 1px solid #b0b0b0;
+    flex: 1.4;
+    padding: 10px 0;
+
+    h4 {
+      width: 100%;
+      font-weight: bold;
+      text-transform: capitalize;
+      text-align: center;
     }
 
-    .event-image {
-      img {
-        width: 100%;
-        aspect-ratio: 5/ 2;
-        object-fit: cover;
-      }
+    h6 {
+      width: 100%;
+      text-align: center;
+      color: #a4a4a4;
     }
-    .detail-box {
-      border-left: 1px solid #b0b0b0;
-      border-right: 1px solid #b0b0b0;
-      flex: 1.4;
-      padding: 10px 0;
+  }
 
-      h4 {
-        width: 100%;
+  .date-box {
+    h3 {
+      color: $Orangeish-red;
+
+      span {
+        font-size: 1.2em;
         font-weight: bold;
-        text-transform: capitalize;
-        text-align: center;
       }
+    }
+  }
+}
 
-      h6 {
-        width: 100%;
-        text-align: center;
-        color: #a4a4a4;
-      }
+.jobs {
+  width: 100%;
+
+  form {
+    width: 90%;
+
+    .input-group {
+      width: 100%;
+      gap: 10px;
+    }
+  }
+
+  .box {
+    width: 90%;
+    height: auto;
+
+    img {
+      width: 120px;
+    }
+
+    .location {
+      gap: 10px;
     }
 
     .date-box {
-      h3 {
-        color: $Orangeish-red;
+      margin: 20px;
+      .button {
+        color: $Orangeish-red !important;
+        border-color: $Orangeish-red;
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 10px 25px;
 
-        span {
-          font-size: 1.2em;
-          font-weight: bold;
+        &:hover {
+          background-color: $Orangeish-red;
+          color: $Pearl-White !important;
         }
       }
+    }
+    p {
+      margin: 0;
     }
   }
 }
