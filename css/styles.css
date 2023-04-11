@@ -12425,25 +12425,26 @@ footer .copyright {
   align-items: center;
 }
 .detail-page .title-area h1, .detail-page .title-area .h1 {
-  color: #fff;
+  margin: 20px;
+  color: #f3f3f3;
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
-  font-size: 40px;
+  font-size: 35px;
   border-radius: 10px;
+  max-width: 1000px;
 }
 .detail-page .title-area .button {
   position: absolute;
   left: 50px;
   top: 30px;
-  color: #fff;
-  background: transparent;
+  color: #f3f3f3;
+  background: rgba(255, 255, 255, 0.2);
   padding: 10px 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 }
 .detail-page .title-area .button:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  color: #fff !important;
 }
 @keyframes animate {
   0% {
@@ -12455,4 +12456,29 @@ footer .copyright {
   100% {
     background-position: 0 50%;
   }
+}
+.detail-page .content-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+}
+.detail-page .content-area .content-info {
+  align-self: flex-start;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.detail-page .content-area .content-text p {
+  line-height: 150%;
+  font-size: 18px;
+  color: #333;
+  text-align: justify;
+}
+.detail-page .content-area .content-text img {
+  margin: 20px 0;
 }/*# sourceMappingURL=styles.css.map */
