@@ -47,13 +47,13 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/blog.html">Blog</a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" aria-current="page" href="/event.html"
-                    >Event</a
-                  >
-                </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/jobs.html">Job Opportunity</a>
+                  <a class="nav-link" href="/event.html">Event</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" aria-current="page" href="/jobs.html"
+                    >Job Opportunity</a
+                  >
                 </li>
               </ul>
             </div>
@@ -64,13 +64,38 @@
 
     <section class="event-page container py-5">
       <div class="heading-area mt-5">
-        <p class="tag">Our Events</p>
-        <p class="heading">Join us for a great time at our upcoming event</p>
+        <p class="tag">Career Opportunity</p>
+        <p class="heading">Open the door to your dream career path today!</p>
       </div>
 
       <div
         class="events d-flex flex-column align-items-start justify-content-center"
       >
+        <form class="filter">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Keywords(e.g. job, city, role...)"
+            />
+            <input type="text" class="form-control" placeholder="Location" />
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Not Specified</option>
+              <option value="1">Not</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Not Specified</option>
+              <option value="1">Full-Time</option>
+              <option value="2">Part-Time</option>
+              <option value="3">Contract</option>
+              <option value="4">Intern</option>
+            </select>
+            <a href="" type="button" class="button">Search</a>
+          </div>
+        </form>
+
         <div class="event-box">
           <div class="event-image">
             <img src="images/event.jpg" class="img-fluid" alt="" />
