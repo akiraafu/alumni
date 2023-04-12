@@ -12541,14 +12541,22 @@ footer .copyright {
 .detail-page .content-area .content-text img {
   margin: 20px 0;
 }
+.detail-page .job-content .content-info {
+  width: 100%;
+}
 .detail-page .job-content .content-info .box {
+  width: 100%;
   font-weight: normal;
   border: none;
 }
 .detail-page .job-content .content-info .box p {
   margin: 0;
 }
+.detail-page .job-content .content-info .box .job-image {
+  max-width: 250px;
+}
 .detail-page .job-content .content-info .box .detail-box {
+  width: 80%;
   border: none;
 }
 .detail-page .job-content .content-info .box .detail-box h4, .detail-page .job-content .content-info .box .detail-box .h4 {
@@ -12598,6 +12606,9 @@ footer .copyright {
   }
   .upcoming-event .event-details .button {
     margin: 0;
+  }
+  .detail-page .blog-content .content-info {
+    width: 100%;
   }
   footer .item.social {
     text-align: center;
@@ -12676,5 +12687,25 @@ footer .copyright {
   }
   .slides .detail-box h2, .slides .detail-box .h2 {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .detail-page .job-content .content-info .box {
+    flex-direction: column;
+    width: 100%;
+    font-weight: normal;
+    border: none;
+  }
+  .detail-page .job-content .content-info .box p {
+    margin: 0;
+  }
+  .detail-page .job-content .content-info .box .detail-box {
+    border: none;
+  }
+  .detail-page .job-content .content-info .box .detail-box h4, .detail-page .job-content .content-info .box .detail-box .h4 {
+    margin: 0;
+  }
+  .detail-page .blog-content .content-info {
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=styles.css.map */

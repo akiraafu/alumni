@@ -793,14 +793,21 @@ footer {
 
   .job-content {
     .content-info {
+      width: 100%;
       .box {
+        width: 100%;
         font-weight: normal;
         border: none;
         p {
           margin: 0;
         }
 
+        .job-image {
+          max-width: 250px;
+        }
+
         .detail-box {
+          width: 80%;
           border: none;
           h4 {
             margin: 0;

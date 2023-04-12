@@ -53,6 +53,14 @@
     }
   }
 
+  .detail-page {
+    .blog-content {
+      .content-info {
+        width: 100%;
+      }
+    }
+  }
+
   footer {
     .item.social {
       text-align: center;
@@ -166,4 +174,32 @@
 }
 
 @include mediaXsm {
+  .detail-page {
+    .job-content {
+      .content-info {
+        .box {
+          flex-direction: column;
+          width: 100%;
+          font-weight: normal;
+          border: none;
+          p {
+            margin: 0;
+          }
+
+          .detail-box {
+            border: none;
+            h4 {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .blog-content {
+      .content-info {
+        flex-wrap: wrap;
+      }
+    }
+  }
 }
