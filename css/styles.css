@@ -12143,6 +12143,22 @@ a:focus {
 .activities .row .col a:hover {
   color: #e45f2b;
 }
+.activities .row .scrollbar {
+  height: 300px;
+  padding: 0 10px;
+}
+.activities .row #scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.activities .row #scrollbar::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+.activities .row #scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(22, 22, 22, 0.15);
+}
 .activities .row .cards {
   height: 450px;
   overflow-y: scroll;
@@ -12548,7 +12564,7 @@ footer .copyright {
   text-align: left;
 }
 
-@media screen and (min-width: 769px) and (max-width: 990px) {
+@media screen and (max-width: 993px) {
   .custom-nav-container .navbar-toggler {
     border-color: white;
   }
@@ -12557,28 +12573,6 @@ footer .copyright {
   }
   .custom-nav-container .navbar-nav .nav-item .nav-link {
     padding: 15px 15px 15px !important;
-  }
-  footer .item.social {
-    text-align: center;
-    margin-top: 20px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .custom-nav-container .navbar-toggler {
-    border-color: white;
-  }
-  .custom-nav-container .navbar-toggler-icon {
-    background-image: url(/images/Hamburger_icon_white.svg);
-  }
-  .custom-nav-container .navbar-nav .nav-item .nav-link {
-    padding: 15px 15px 15px !important;
-  }
-  .slides .detail-box h1, .slides .detail-box .h1 {
-    font-size: 2.5rem;
-    letter-spacing: 1rem;
-  }
-  .slides .detail-box h2, .slides .detail-box .h2 {
-    font-size: 20px;
   }
   .upcoming-event {
     width: 100%;
@@ -12598,7 +12592,6 @@ footer .copyright {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 20px;
   }
   .upcoming-event .event-details .event-utils .event-date {
     margin: 0;
@@ -12606,9 +12599,22 @@ footer .copyright {
   .upcoming-event .event-details .button {
     margin: 0;
   }
+  footer .item.social {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slides .detail-box h1, .slides .detail-box .h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+  }
+  .slides .detail-box h2, .slides .detail-box .h2 {
+    font-size: 20px;
+  }
   .aboutus {
     margin-top: 30px;
-    height: 100vh;
+    height: 70vh;
   }
   .aboutus .row {
     display: flex;
@@ -12619,6 +12625,12 @@ footer .copyright {
     margin-top: 20px;
     width: 60%;
     z-index: -1;
+  }
+  .sub-page .aboutus {
+    height: 100vh;
+  }
+  .sub-page .aboutus .row .about-img {
+    width: 70%;
   }
   .newsletter {
     padding: 30px;
@@ -12658,15 +12670,6 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 650px) {
-  .custom-nav-container .navbar-toggler {
-    border-color: white;
-  }
-  .custom-nav-container .navbar-toggler-icon {
-    background-image: url(/images/Hamburger_icon_white.svg);
-  }
-  .custom-nav-container .navbar-nav .nav-item .nav-link {
-    padding: 15px 15px 15px !important;
-  }
   .slides .detail-box h1, .slides .detail-box .h1 {
     font-size: 25px;
     letter-spacing: 5px;

@@ -260,6 +260,7 @@ a:focus {
 .aboutus {
   margin-top: 50px;
   height: 85vh;
+
   .aboutus-img-one {
     border-radius: 30% 70% 67% 33% / 30% 30% 70% 70%;
     box-shadow: -10vmin 10vmin rgba(214, 143, 143, 0.2);
@@ -290,6 +291,25 @@ a:focus {
           color: $Orangeish-red;
         }
       }
+    }
+    .scrollbar {
+      height: 300px;
+      padding: 0 10px;
+    }
+
+    #scrollbar::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    #scrollbar::-webkit-scrollbar-track {
+      border-radius: 8px;
+      background-color: #e7e7e7;
+      border: 1px solid #cacaca;
+    }
+
+    #scrollbar::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: rgba(22, 22, 22, 0.15);
     }
 
     .cards {
@@ -615,6 +635,7 @@ footer {
     }
   }
 }
+
 .jobs-page {
   .jobs {
     width: 100%;
