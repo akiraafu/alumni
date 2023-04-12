@@ -9,3 +9,34 @@ $Yellow: #f6c445;
 $Pearl-White: #f3f3f3;
 $VeryDark-Gray: #212427;
 $Shadow: rgba(0, 0, 0, 0.05);
+
+// media query mixins
+@mixin mediaXsm {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 650px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 990px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1250px) {
+    @content;
+  }
+}

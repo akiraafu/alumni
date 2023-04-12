@@ -73,7 +73,6 @@ a:focus {
         position: relative;
         text-transform: uppercase;
         transition: all ease-in-out 400ms;
-
         box-shadow: inset 0 0 0 0 $Orangeish-red;
         -webkit-transition: ease-out 0.4s;
         -moz-transition: ease-out 0.4s;
@@ -83,7 +82,6 @@ a:focus {
       &:hover,
       &.active {
         .nav-link {
-          // background-color: $Orangeish-red;
           box-shadow: inset 0 100px 0 0 $Orangeish-red;
         }
       }
@@ -115,12 +113,49 @@ a:focus {
   }
 }
 
+.slides {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $Pearl-White;
+
+  #carouselExampleIndicators {
+    width: 100%;
+  }
+
+  .detail-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 15px;
+      border-bottom: 1px solid rgba($color: $Pearl-White, $alpha: 0.2);
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+
+    .button {
+      margin-top: 35px;
+    }
+
+    margin-bottom: 110px;
+  }
+}
+
 .upcoming-event {
   background-color: #eeeeee;
 
   .event-details {
     .event-image {
-      max-width: 450px;
       height: 100%;
       object-fit: cover;
       position: relative;
@@ -129,6 +164,7 @@ a:focus {
         rgba(253, 29, 29, 1) 50%,
         rgba(252, 176, 69, 1) 100%
       );
+
       padding-left: 0px;
       padding-right: 10px;
       margin-right: 20px;
@@ -158,40 +194,50 @@ a:focus {
         line-height: 1.2;
         margin: 14px 0;
         font-size: 30px;
-        text-transform: uppercase;
+        text-transform: capitalize;
+      }
+      p {
+        text-align: justify;
       }
     }
 
-    .event-date {
+    .event-utils {
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      background: lightgray;
-      height: 110px;
-      margin-bottom: 20px;
-      gap: 0;
-      text-align: center;
+      align-items: end;
 
-      :first-child {
-        display: block;
-        width: 70px;
-        padding: 5px 10px 0 10px;
-        font-weight: 600;
-        font-size: 30px;
-      }
+      .event-date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: lightgray;
+        height: 110px;
+        margin-bottom: 20px;
+        gap: 0;
+        text-align: center;
 
-      :nth-child(2) {
-        display: block;
-        padding: 0 10px 5px 10px;
-        width: 70px;
-      }
+        :first-child {
+          display: block;
+          width: 70px;
+          padding: 5px 10px 0 10px;
+          font-weight: 600;
+          font-size: 30px;
+        }
 
-      :nth-child(3) {
-        display: block;
-        width: 70px;
-        padding: 5px 12px;
-        background: rgba(0, 0, 0, 0.3);
+        :nth-child(2) {
+          display: block;
+          padding: 0 10px 5px 10px;
+          width: 70px;
+        }
+
+        :nth-child(3) {
+          display: block;
+          width: 70px;
+          padding: 5px 12px;
+          background: rgba(0, 0, 0, 0.3);
+        }
       }
     }
 
@@ -208,44 +254,6 @@ a:focus {
         color: $Orangeish-red !important;
       }
     }
-  }
-}
-
-.slides {
-  width: 100%;
-  height: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $Pearl-White;
-
-  #carouselExampleIndicators {
-    width: 100%;
-  }
-
-  .detail-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    h1 {
-      font-size: 4rem;
-      letter-spacing: 0.7rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding: 15px;
-      border-bottom: 1px solid rgba($color: $Pearl-White, $alpha: 0.2);
-    }
-    h2 {
-      margin-top: 2rem;
-    }
-
-    .button {
-      margin-top: 35px;
-    }
-
-    margin-bottom: 110px;
   }
 }
 
@@ -268,13 +276,12 @@ a:focus {
     h3 {
       font-size: 25px;
     }
+    .button {
+      margin: 35px auto;
+    }
     .col {
       background-color: $Pearl-White;
       border-radius: 5px;
-
-      .button {
-        margin: 35px auto;
-      }
 
       a {
         color: inherit;
@@ -316,11 +323,15 @@ a:focus {
 
     .jobs {
       .card {
-        img {
-          background-color: lightgray;
-          padding: 5px;
-          aspect-ratio: 1/ 1;
-          border-radius: 50%;
+        .row {
+          display: flex;
+          align-items: center;
+          img {
+            background-color: lightgray;
+            padding: 5px;
+            aspect-ratio: 1/ 1;
+            border-radius: 50%;
+          }
         }
       }
     }
@@ -353,9 +364,20 @@ a:focus {
 .newsletter {
   width: 100%;
   height: 80vh;
-  background-image: url("/images/bg-newsletter.jpg");
+  background-image: linear-gradient(
+      rgba(29, 38, 113, 0.8),
+      rgba(29, 38, 113, 0.8)
+    ),
+    url("/images/bg-newsletter.jpg");
+  background-size: cover;
   color: $Pearl-White;
+  h2 {
+    text-align: center;
+  }
 
+  p {
+    text-align: center;
+  }
   form {
     width: 500px;
 
@@ -372,6 +394,7 @@ a:focus {
 
       &::placeholder {
         color: lightgray;
+        text-align: center;
       }
 
       &:focus {
@@ -456,26 +479,6 @@ footer {
     }
   }
 
-  // @media (max-width: 767px) {
-  //   .footer-dark .item:not(.social) {
-  //     text-align: center;
-  //     padding-bottom: 20px;
-  //   }
-  // }
-
-  // @media (max-width: 767px) {
-  //   .footer.item.text {
-  //     margin-bottom: 0;
-  //   }
-  // }
-
-  // @media (max-width: 991px) {
-  //   .footer .item.social {
-  //     text-align: center;
-  //     margin-top: 20px;
-  //   }
-  // }
-
   .copyright {
     text-align: center;
     padding-top: 24px;
@@ -494,6 +497,12 @@ footer {
     background-clip: text;
     -webkit-background-clip: text;
     // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.event-page {
+  .events {
+    margin: 50px 0;
   }
 }
 
@@ -606,48 +615,50 @@ footer {
     }
   }
 }
+.jobs-page {
+  .jobs {
+    width: 100%;
+    margin: 50px 0;
 
-.jobs {
-  width: 100%;
+    form {
+      width: 90%;
 
-  form {
-    width: 90%;
-
-    .input-group {
-      width: 100%;
-      gap: 10px;
-    }
-  }
-
-  .box {
-    width: 90%;
-    height: auto;
-
-    img {
-      width: 120px;
-    }
-
-    .location {
-      gap: 10px;
-    }
-
-    .date-box {
-      margin: 20px;
-      .button {
-        color: $Orangeish-red !important;
-        border-color: $Orangeish-red;
-        background-color: transparent;
-        border-radius: 10px;
-        padding: 10px 25px;
-
-        &:hover {
-          background-color: $Orangeish-red;
-          color: $Pearl-White !important;
-        }
+      .input-group {
+        width: 100%;
+        gap: 10px;
       }
     }
-    p {
-      margin: 0;
+
+    .box {
+      width: 90%;
+      height: auto;
+
+      img {
+        width: 120px;
+      }
+
+      .location {
+        gap: 10px;
+      }
+
+      .date-box {
+        margin: 20px;
+        .button {
+          color: $Orangeish-red !important;
+          border-color: $Orangeish-red;
+          background-color: transparent;
+          border-radius: 10px;
+          padding: 10px 25px;
+
+          &:hover {
+            background-color: $Orangeish-red;
+            color: $Pearl-White !important;
+          }
+        }
+      }
+      p {
+        margin: 0;
+      }
     }
   }
 }
@@ -718,6 +729,11 @@ footer {
     }
   }
 
+  .job-title {
+    h1 {
+      font-size: 45px;
+    }
+  }
   .content-area {
     display: flex;
     flex-direction: column;
@@ -753,4 +769,35 @@ footer {
       }
     }
   }
+
+  .job-content {
+    .content-info {
+      .box {
+        font-weight: normal;
+        border: none;
+        p {
+          margin: 0;
+        }
+
+        .detail-box {
+          border: none;
+          h4 {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .content-text {
+      align-items: self-start !important;
+      h3 {
+        margin: 15px 0;
+      }
+      p {
+        text-align: left;
+      }
+    }
+  }
 }
+
+@import "mobile";

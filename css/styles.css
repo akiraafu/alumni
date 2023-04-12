@@ -11994,11 +11994,43 @@ a:focus {
   color: #fff;
 }
 
+.slides {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3f3f3;
+}
+.slides #carouselExampleIndicators {
+  width: 100%;
+}
+.slides .detail-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 110px;
+}
+.slides .detail-box h1, .slides .detail-box .h1 {
+  font-size: 4rem;
+  letter-spacing: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px;
+  border-bottom: 1px solid rgba(243, 243, 243, 0.2);
+}
+.slides .detail-box h2, .slides .detail-box .h2 {
+  margin-top: 2rem;
+}
+.slides .detail-box .button {
+  margin-top: 35px;
+}
+
 .upcoming-event {
   background-color: #eeeeee;
 }
 .upcoming-event .event-details .event-image {
-  max-width: 450px;
   height: 100%;
   object-fit: cover;
   position: relative;
@@ -12027,9 +12059,18 @@ a:focus {
   line-height: 1.2;
   margin: 14px 0;
   font-size: 30px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
-.upcoming-event .event-details .event-date {
+.upcoming-event .event-details .event-content p {
+  text-align: justify;
+}
+.upcoming-event .event-details .event-utils {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.upcoming-event .event-details .event-utils .event-date {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12040,19 +12081,19 @@ a:focus {
   gap: 0;
   text-align: center;
 }
-.upcoming-event .event-details .event-date :first-child {
+.upcoming-event .event-details .event-utils .event-date :first-child {
   display: block;
   width: 70px;
   padding: 5px 10px 0 10px;
   font-weight: 600;
   font-size: 30px;
 }
-.upcoming-event .event-details .event-date :nth-child(2) {
+.upcoming-event .event-details .event-utils .event-date :nth-child(2) {
   display: block;
   padding: 0 10px 5px 10px;
   width: 70px;
 }
-.upcoming-event .event-details .event-date :nth-child(3) {
+.upcoming-event .event-details .event-utils .event-date :nth-child(3) {
   display: block;
   width: 70px;
   padding: 5px 12px;
@@ -12069,39 +12110,6 @@ a:focus {
 .upcoming-event .event-details .button:hover {
   background-color: transparent;
   color: #e45f2b !important;
-}
-
-.slides {
-  width: 100%;
-  height: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #f3f3f3;
-}
-.slides #carouselExampleIndicators {
-  width: 100%;
-}
-.slides .detail-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 110px;
-}
-.slides .detail-box h1, .slides .detail-box .h1 {
-  font-size: 4rem;
-  letter-spacing: 0.7rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 15px;
-  border-bottom: 1px solid rgba(243, 243, 243, 0.2);
-}
-.slides .detail-box h2, .slides .detail-box .h2 {
-  margin-top: 2rem;
-}
-.slides .detail-box .button {
-  margin-top: 35px;
 }
 
 .aboutus {
@@ -12122,12 +12130,12 @@ a:focus {
 .activities .row h3, .activities .row .h3 {
   font-size: 25px;
 }
+.activities .row .button {
+  margin: 35px auto;
+}
 .activities .row .col {
   background-color: #f3f3f3;
   border-radius: 5px;
-}
-.activities .row .col .button {
-  margin: 35px auto;
 }
 .activities .row .col a {
   color: inherit;
@@ -12158,7 +12166,11 @@ a:focus {
 .activities .row .cards .card .card-body .card-text {
   font-size: 14px;
 }
-.activities .row .jobs .card img {
+.activities .row .jobs .card .row {
+  display: flex;
+  align-items: center;
+}
+.activities .row .jobs .card .row img {
   background-color: lightgray;
   padding: 5px;
   aspect-ratio: 1/1;
@@ -12187,8 +12199,15 @@ a:focus {
 .newsletter {
   width: 100%;
   height: 80vh;
-  background-image: url("/images/bg-newsletter.jpg");
+  background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(29, 38, 113, 0.8)), url("/images/bg-newsletter.jpg");
+  background-size: cover;
   color: #f3f3f3;
+}
+.newsletter h2, .newsletter .h2 {
+  text-align: center;
+}
+.newsletter p {
+  text-align: center;
 }
 .newsletter form {
   width: 500px;
@@ -12206,6 +12225,7 @@ a:focus {
 }
 .newsletter form input::placeholder {
   color: lightgray;
+  text-align: center;
 }
 .newsletter form input:focus {
   padding-bottom: 6px;
@@ -12290,6 +12310,10 @@ footer .copyright {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+.event-page .events {
+  margin: 50px 0;
 }
 
 .blog-page .blogs {
@@ -12380,41 +12404,42 @@ footer .copyright {
   font-weight: bold;
 }
 
-.jobs {
+.jobs-page .jobs {
   width: 100%;
+  margin: 50px 0;
 }
-.jobs form {
+.jobs-page .jobs form {
   width: 90%;
 }
-.jobs form .input-group {
+.jobs-page .jobs form .input-group {
   width: 100%;
   gap: 10px;
 }
-.jobs .box {
+.jobs-page .jobs .box {
   width: 90%;
   height: auto;
 }
-.jobs .box img {
+.jobs-page .jobs .box img {
   width: 120px;
 }
-.jobs .box .location {
+.jobs-page .jobs .box .location {
   gap: 10px;
 }
-.jobs .box .date-box {
+.jobs-page .jobs .box .date-box {
   margin: 20px;
 }
-.jobs .box .date-box .button {
+.jobs-page .jobs .box .date-box .button {
   color: #e45f2b !important;
   border-color: #e45f2b;
   background-color: transparent;
   border-radius: 10px;
   padding: 10px 25px;
 }
-.jobs .box .date-box .button:hover {
+.jobs-page .jobs .box .date-box .button:hover {
   background-color: #e45f2b;
   color: #f3f3f3 !important;
 }
-.jobs .box p {
+.jobs-page .jobs .box p {
   margin: 0;
 }
 
@@ -12466,6 +12491,9 @@ footer .copyright {
     background-position: 0 50%;
   }
 }
+.detail-page .job-title h1, .detail-page .job-title .h1 {
+  font-size: 45px;
+}
 .detail-page .content-area {
   display: flex;
   flex-direction: column;
@@ -12496,4 +12524,154 @@ footer .copyright {
 }
 .detail-page .content-area .content-text img {
   margin: 20px 0;
+}
+.detail-page .job-content .content-info .box {
+  font-weight: normal;
+  border: none;
+}
+.detail-page .job-content .content-info .box p {
+  margin: 0;
+}
+.detail-page .job-content .content-info .box .detail-box {
+  border: none;
+}
+.detail-page .job-content .content-info .box .detail-box h4, .detail-page .job-content .content-info .box .detail-box .h4 {
+  margin: 0;
+}
+.detail-page .job-content .content-text {
+  align-items: self-start !important;
+}
+.detail-page .job-content .content-text h3, .detail-page .job-content .content-text .h3 {
+  margin: 15px 0;
+}
+.detail-page .job-content .content-text p {
+  text-align: left;
+}
+
+@media screen and (min-width: 769px) and (max-width: 990px) {
+  .custom-nav-container .navbar-toggler {
+    border-color: white;
+  }
+  .custom-nav-container .navbar-toggler-icon {
+    background-image: url(/images/Hamburger_icon_white.svg);
+  }
+  .custom-nav-container .navbar-nav .nav-item .nav-link {
+    padding: 15px 15px 15px !important;
+  }
+  footer .item.social {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .custom-nav-container .navbar-toggler {
+    border-color: white;
+  }
+  .custom-nav-container .navbar-toggler-icon {
+    background-image: url(/images/Hamburger_icon_white.svg);
+  }
+  .custom-nav-container .navbar-nav .nav-item .nav-link {
+    padding: 15px 15px 15px !important;
+  }
+  .slides .detail-box h1, .slides .detail-box .h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+  }
+  .slides .detail-box h2, .slides .detail-box .h2 {
+    font-size: 20px;
+  }
+  .upcoming-event {
+    width: 100%;
+  }
+  .upcoming-event .event-details {
+    flex-direction: column;
+  }
+  .upcoming-event .event-details .event-image {
+    padding: 0 0 10px 0;
+    background: linear-gradient(to right, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  }
+  .upcoming-event .event-details .event-image::after {
+    top: 100%;
+    left: 50%;
+  }
+  .upcoming-event .event-details .event-utils {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+  }
+  .upcoming-event .event-details .event-utils .event-date {
+    margin: 0;
+  }
+  .upcoming-event .event-details .button {
+    margin: 0;
+  }
+  .aboutus {
+    margin-top: 30px;
+    height: 100vh;
+  }
+  .aboutus .row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .aboutus .row .about-img {
+    margin-top: 20px;
+    width: 60%;
+    z-index: -1;
+  }
+  .newsletter {
+    padding: 30px;
+  }
+  .newsletter form {
+    width: 280px;
+  }
+  .newsletter form input {
+    width: 100%;
+    font-family: inherit;
+    border: 0;
+    border-bottom: 2px solid lightgray;
+    outline: 0;
+    color: #f3f3f3;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .newsletter form input::placeholder {
+    color: lightgray;
+    text-align: center;
+  }
+  .newsletter form input:focus {
+    padding-bottom: 6px;
+    font-weight: bold;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #f6c445, #72fa93);
+    border-image-slice: 1;
+  }
+  footer .item:not(.social) {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  footer .text .logo .navbar-brand {
+    color: #212427;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .custom-nav-container .navbar-toggler {
+    border-color: white;
+  }
+  .custom-nav-container .navbar-toggler-icon {
+    background-image: url(/images/Hamburger_icon_white.svg);
+  }
+  .custom-nav-container .navbar-nav .nav-item .nav-link {
+    padding: 15px 15px 15px !important;
+  }
+  .slides .detail-box h1, .slides .detail-box .h1 {
+    font-size: 25px;
+    letter-spacing: 5px;
+  }
+  .slides .detail-box h2, .slides .detail-box .h2 {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
