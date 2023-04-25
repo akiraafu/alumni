@@ -12012,12 +12012,36 @@ a:focus {
   margin-bottom: 110px;
 }
 .slides .detail-box h1, .slides .detail-box .h1 {
+  display: inline-block;
   font-size: 4rem;
   letter-spacing: 2rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 15px;
-  border-bottom: 1px solid rgba(243, 243, 243, 0.2);
+  padding: 15px 0;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  /* The typing effect */
+  /* The typewriter cursor effect */
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 .slides .detail-box h2, .slides .detail-box .h2 {
   margin-top: 2rem;
@@ -12184,6 +12208,7 @@ a:focus {
 .activities .row .jobs .card .row img {
   background-color: lightgray;
   padding: 5px;
+  object-fit: scale-down;
   aspect-ratio: 1/1;
   border-radius: 50%;
 }
@@ -12525,13 +12550,12 @@ footer .copyright {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .detail-page .content-area .content-text p {
   line-height: 150%;
   font-size: 18px;
   color: #333;
-  text-align: justify;
 }
 .detail-page .content-area .content-text img {
   margin: 20px 0;
@@ -12633,6 +12657,9 @@ footer .copyright {
   }
   .sub-page .aboutus .row .about-img {
     width: 70%;
+  }
+  .sub-page .event-page .box .event-image img {
+    aspect-ratio: 3/2;
   }
   .newsletter {
     padding: 30px;

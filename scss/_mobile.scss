@@ -107,6 +107,16 @@
         }
       }
     }
+
+    .event-page {
+      .box {
+        .event-image {
+          img {
+            aspect-ratio: 3/2;
+          }
+        }
+      }
+    }
   }
 
   .newsletter {
