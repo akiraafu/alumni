@@ -12333,7 +12333,7 @@ footer .copyright {
 }
 
 .heading-area .heading {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 600;
   background-image: linear-gradient(to left, #553c9a 45%, #ee4b2b);
   color: transparent;
@@ -12349,7 +12349,6 @@ footer .copyright {
   margin: 50px 0;
 }
 .blog-page .blogs .blog-box {
-  max-width: 800px;
   margin: 30px 0;
 }
 .blog-page .blogs .blog-box img {
@@ -12583,6 +12582,46 @@ footer .copyright {
   text-align: left;
 }
 
+.post-tagbox {
+  position: absolute;
+  bottom: 3%;
+  font-size: 14px;
+  cursor: default;
+}
+.post-tagbox .post-tag {
+  display: inline-block;
+  background: #f7dbdb;
+  color: #777;
+  border-radius: 3px 0 0 3px;
+  line-height: 26px;
+  padding: 0 10px 0 23px;
+  position: relative;
+  margin-right: 20px;
+  cursor: default;
+  user-select: none;
+  transition: color 0.2s;
+}
+.post-tagbox .post-tag::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  height: 6px;
+  left: 10px;
+  width: 6px;
+  top: 10px;
+}
+.post-tagbox .post-tag::after {
+  content: "";
+  position: absolute;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #f7dbdb;
+  border-top: 13px solid transparent;
+  right: -9.5px;
+  top: 0;
+}
+
 @media screen and (max-width: 993px) {
   .custom-nav-container .navbar-toggler {
     border-color: white;
@@ -12692,7 +12731,7 @@ footer .copyright {
 }
 @media screen and (max-width: 650px) {
   .slides .detail-box h1, .slides .detail-box .h1 {
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 5px;
   }
   .slides .detail-box h2, .slides .detail-box .h2 {

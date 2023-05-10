@@ -542,7 +542,7 @@ footer {
 
 .heading-area {
   .heading {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 600;
     background-image: linear-gradient(to left, #553c9a 45%, #ee4b2b);
     color: transparent;
@@ -563,7 +563,7 @@ footer {
     margin: 50px 0;
 
     .blog-box {
-      max-width: 800px;
+      // max-width: 1000px;
       margin: 30px 0;
 
       img {
@@ -857,6 +857,51 @@ footer {
       p {
         text-align: left;
       }
+    }
+  }
+}
+
+.post-tagbox {
+  position: absolute;
+  bottom: 3%;
+  font-size: 14px;
+  cursor: default;
+  // user-select: none;
+  // pointer-events: none;
+
+  .post-tag {
+    display: inline-block;
+    background: #f7dbdb;
+    color: #777;
+    border-radius: 3px 0 0 3px;
+    line-height: 26px;
+    padding: 0 10px 0 23px;
+    position: relative;
+    margin-right: 20px;
+    cursor: default;
+    user-select: none;
+    transition: color 0.2s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+      height: 6px;
+      left: 10px;
+      width: 6px;
+      top: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 13px solid transparent;
+      border-left: 10px solid #f7dbdb;
+      border-top: 13px solid transparent;
+      right: -9.5px;
+      top: 0;
     }
   }
 }
