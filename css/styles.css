@@ -11945,7 +11945,7 @@ a:focus {
 .hero-area {
   height: 100vh;
   background-color: #b5caee;
-  background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/images/hero-bg1.jpg");
+  background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("../images/hero-bg1.jpg");
   background-size: cover;
 }
 
@@ -12228,7 +12228,7 @@ a:focus {
 .newsletter {
   width: 100%;
   height: 80vh;
-  background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(29, 38, 113, 0.8)), url("/images/bg-newsletter.jpg");
+  background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(29, 38, 113, 0.8)), url("../images/bg-newsletter.jpg");
   background-size: cover;
   color: #f3f3f3;
 }
@@ -12473,7 +12473,7 @@ footer .copyright {
 .detail-page .title-area {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 35vh;
   background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
   background-size: 400% 400%;
   position: relative;
@@ -12485,7 +12485,7 @@ footer .copyright {
 .detail-page .title-area h1, .detail-page .title-area .h1 {
   margin: 20px;
   color: #f3f3f3;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   font-size: 32px;
   border-radius: 10px;
@@ -12493,8 +12493,8 @@ footer .copyright {
 }
 .detail-page .title-area .button {
   position: absolute;
-  left: 30px;
-  top: 30px;
+  left: 20px;
+  top: 20px;
   color: #f3f3f3;
   background: rgba(255, 255, 255, 0.2);
   padding: 10px 15px;
@@ -12522,20 +12522,21 @@ footer .copyright {
   font-size: 45px;
 }
 .detail-page .content-area {
+  width: 100%;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   max-width: 1000px;
 }
 .detail-page .content-area .content-info {
-  align-self: flex-start;
-  width: 70%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-weight: bold;
+  justify-content: center;
+  gap: 2rem;
 }
 .detail-page .content-area .content-text {
   display: flex;
@@ -12627,7 +12628,7 @@ footer .copyright {
     border-color: white;
   }
   .custom-nav-container .navbar-toggler-icon {
-    background-image: url(/images/Hamburger_icon_white.svg);
+    background-image: url(../images/Hamburger_icon_white.svg);
   }
   .custom-nav-container .navbar-nav .nav-item .nav-link {
     padding: 15px 15px 15px !important;
@@ -12692,33 +12693,27 @@ footer .copyright {
   .sub-page .event-page .box .event-image img {
     aspect-ratio: 3/2;
   }
+  .detail-page .title-area {
+    height: auto;
+  }
+  .detail-page .title-area h1, .detail-page .title-area .h1 {
+    margin: 80px 20px 40px 20px;
+    font-size: 18px;
+  }
+  .detail-page .content-area .content-text p {
+    line-height: 150%;
+    font-size: 16px;
+    color: #333;
+  }
   .newsletter {
     padding: 30px;
+    height: 40vh;
   }
-  .newsletter form {
-    width: 280px;
+  .newsletter h2, .newsletter .h2 {
+    font-size: 1.5rem;
   }
-  .newsletter form input {
-    width: 100%;
-    font-family: inherit;
-    border: 0;
-    border-bottom: 2px solid lightgray;
-    outline: 0;
-    color: #f3f3f3;
-    padding: 7px 0;
-    background: transparent;
-    transition: border-color 0.2s;
-  }
-  .newsletter form input::placeholder {
-    color: lightgray;
-    text-align: center;
-  }
-  .newsletter form input:focus {
-    padding-bottom: 6px;
-    font-weight: bold;
-    border-width: 3px;
-    border-image: linear-gradient(to right, #f6c445, #72fa93);
-    border-image-slice: 1;
+  .newsletter p {
+    font-size: 1rem;
   }
   footer .item:not(.social) {
     text-align: center;
@@ -12737,8 +12732,40 @@ footer .copyright {
   .slides .detail-box h2, .slides .detail-box .h2 {
     font-size: 1rem;
   }
+  .detail-page .title-area {
+    height: auto;
+  }
+  .detail-page .content-area .content-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .detail-page .content-area .content-text p {
+    font-size: 14px;
+  }
+  .newsletter {
+    padding: 30px;
+    height: 50vh;
+  }
+  .newsletter h2, .newsletter .h2 {
+    font-size: 1.2rem;
+  }
+  .newsletter p {
+    font-size: 14px;
+  }
+  .newsletter form {
+    width: 250px;
+  }
 }
 @media screen and (max-width: 460px) {
+  .detail-page .content-area .content-info {
+    font-size: 14px;
+  }
+  .detail-page .content-area .content-text p {
+    font-size: 14px;
+  }
   .detail-page .job-content .content-info .box {
     flex-direction: column;
     width: 100%;
