@@ -25,18 +25,21 @@
     .event-details {
       flex-direction: column;
       .event-image {
-        padding: 0 0 10px 0;
-        background: linear-gradient(
-          to right,
-          rgba(131, 58, 180, 1) 0%,
-          rgba(253, 29, 29, 1) 50%,
-          rgba(252, 176, 69, 1) 100%
-        );
+        padding: 15px;
+        margin-bottom: 1rem;
 
-        &::after {
-          top: 100%;
-          left: 50%;
-        }
+        // padding: 0 0 10px 0;
+        // background: linear-gradient(
+        //   to right,
+        //   rgba(131, 58, 180, 1) 0%,
+        //   rgba(253, 29, 29, 1) 50%,
+        //   rgba(252, 176, 69, 1) 100%
+        // );
+
+        // &::after {
+        //   top: 100%;
+        //   left: 50%;
+        // }
       }
       .event-utils {
         flex-direction: row;
@@ -88,7 +91,7 @@
     // height: 70vh;
     .row {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
       .about-img {
         margin-top: 20px;
@@ -188,9 +191,14 @@
       .content-info {
         width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+
+        p {
+          font-size: 12px;
+          margin-bottom: 5px;
+        }
       }
       .content-text {
         p {
