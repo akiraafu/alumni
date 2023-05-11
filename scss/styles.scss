@@ -50,7 +50,7 @@ a:focus {
       rgba(29, 38, 113, 0.8),
       rgba(195, 55, 100, 0.8)
     ),
-    url("/images/hero-bg1.jpg");
+    url("../images/hero-bg1.jpg");
   background-size: cover;
 }
 
@@ -193,9 +193,9 @@ a:focus {
       //   rgba(252, 176, 69, 1) 100%
       // );
 
-      padding-left: 0px;
-      padding-right: 10px;
-      margin-right: 20px;
+      // padding-left: 0px;
+      // padding-right: 10px;
+      // margin-right: 20px;
 
       // &::after {
       //   content: "";
@@ -420,7 +420,7 @@ a:focus {
       rgba(29, 38, 113, 0.8),
       rgba(29, 38, 113, 0.8)
     ),
-    url("/images/bg-newsletter.jpg");
+    url("../images/bg-newsletter.jpg");
   background-size: cover;
   color: $Pearl-White;
   h2 {
@@ -542,7 +542,7 @@ footer {
 
 .heading-area {
   .heading {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 600;
     background-image: linear-gradient(to left, #553c9a 45%, #ee4b2b);
     color: transparent;
@@ -563,7 +563,7 @@ footer {
     margin: 50px 0;
 
     .blog-box {
-      max-width: 800px;
+      // max-width: 1000px;
       margin: 30px 0;
 
       img {
@@ -720,7 +720,7 @@ footer {
   .title-area {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 35vh;
     background: linear-gradient(
       -45deg,
       #3f51b1 0%,
@@ -744,7 +744,7 @@ footer {
     h1 {
       margin: 20px;
       color: $Pearl-White;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
       padding: 20px;
       font-size: 32px;
       border-radius: 10px;
@@ -753,8 +753,8 @@ footer {
 
     .button {
       position: absolute;
-      left: 30px;
-      top: 30px;
+      left: 20px;
+      top: 20px;
       color: $Pearl-White;
       background: rgba(255, 255, 255, 0.2);
       padding: 10px 15px;
@@ -789,20 +789,21 @@ footer {
   }
 
   .content-area {
+    width: 100%;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
     max-width: 1000px;
 
     .content-info {
-      align-self: flex-start;
-      width: 70%;
+      width: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      font-weight: bold;
+      justify-content: center;
+      gap: 2rem;
     }
 
     .content-text {
@@ -857,6 +858,51 @@ footer {
       p {
         text-align: left;
       }
+    }
+  }
+}
+
+.post-tagbox {
+  position: absolute;
+  bottom: 3%;
+  font-size: 14px;
+  cursor: default;
+  // user-select: none;
+  // pointer-events: none;
+
+  .post-tag {
+    display: inline-block;
+    background: #f7dbdb;
+    color: #777;
+    border-radius: 3px 0 0 3px;
+    line-height: 26px;
+    padding: 0 10px 0 23px;
+    position: relative;
+    margin-right: 20px;
+    cursor: default;
+    user-select: none;
+    transition: color 0.2s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+      height: 6px;
+      left: 10px;
+      width: 6px;
+      top: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 13px solid transparent;
+      border-left: 10px solid #f7dbdb;
+      border-top: 13px solid transparent;
+      right: -9.5px;
+      top: 0;
     }
   }
 }

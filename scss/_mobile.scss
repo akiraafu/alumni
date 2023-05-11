@@ -9,7 +9,7 @@
       border-color: white;
     }
     .navbar-toggler-icon {
-      background-image: url(/images/Hamburger_icon_white.svg);
+      background-image: url(../images/Hamburger_icon_white.svg);
     }
     .navbar-nav {
       .nav-item {
@@ -25,18 +25,21 @@
     .event-details {
       flex-direction: column;
       .event-image {
-        padding: 0 0 10px 0;
-        background: linear-gradient(
-          to right,
-          rgba(131, 58, 180, 1) 0%,
-          rgba(253, 29, 29, 1) 50%,
-          rgba(252, 176, 69, 1) 100%
-        );
+        padding: 15px;
+        margin-bottom: 1rem;
 
-        &::after {
-          top: 100%;
-          left: 50%;
-        }
+        // padding: 0 0 10px 0;
+        // background: linear-gradient(
+        //   to right,
+        //   rgba(131, 58, 180, 1) 0%,
+        //   rgba(253, 29, 29, 1) 50%,
+        //   rgba(252, 176, 69, 1) 100%
+        // );
+
+        // &::after {
+        //   top: 100%;
+        //   left: 50%;
+        // }
       }
       .event-utils {
         flex-direction: row;
@@ -88,7 +91,7 @@
     // height: 70vh;
     .row {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
       .about-img {
         margin-top: 20px;
@@ -119,36 +122,34 @@
     }
   }
 
-  .newsletter {
-    padding: 30px;
-
-    form {
-      width: 280px;
-
-      input {
-        width: 100%;
-        font-family: inherit;
-        border: 0;
-        border-bottom: 2px solid lightgray;
-        outline: 0;
-        color: $Pearl-White;
-        padding: 7px 0;
-        background: transparent;
-        transition: border-color 0.2s;
-
-        &::placeholder {
-          color: lightgray;
-          text-align: center;
-        }
-
-        &:focus {
-          padding-bottom: 6px;
-          font-weight: bold;
-          border-width: 3px;
-          border-image: linear-gradient(to right, $Yellow, $Neon-Green);
-          border-image-slice: 1;
+  .detail-page {
+    .title-area {
+      height: auto;
+      h1 {
+        margin: 80px 20px 40px 20px;
+        font-size: 18px;
+      }
+    }
+    .content-area {
+      .content-text {
+        p {
+          line-height: 150%;
+          font-size: 16px;
+          color: #333;
         }
       }
+    }
+  }
+
+  .newsletter {
+    padding: 30px;
+    height: 40vh;
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
     }
   }
 
@@ -173,7 +174,7 @@
   .slides {
     .detail-box {
       h1 {
-        font-size: 25px;
+        font-size: 30px;
         letter-spacing: 5px;
       }
       h2 {
@@ -181,10 +182,61 @@
       }
     }
   }
+
+  .detail-page {
+    .title-area {
+      height: auto;
+    }
+    .content-area {
+      .content-info {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+
+        p {
+          font-size: 12px;
+          margin-bottom: 5px;
+        }
+      }
+      .content-text {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    padding: 30px;
+    height: 50vh;
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 14px;
+    }
+    form {
+      width: 250px;
+    }
+  }
 }
 
 @include mediaXsm {
   .detail-page {
+    .content-area {
+      .content-info {
+        font-size: 14px;
+      }
+      .content-text {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
     .job-content {
       .content-info {
         .box {
