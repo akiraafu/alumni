@@ -22,36 +22,39 @@
 
   .upcoming-event {
     width: 100%;
-    .event-details {
-      flex-direction: column;
-      .event-image {
-        padding: 15px;
-        margin-bottom: 1rem;
+    .container {
+      padding: 0 48px;
+      .event-details {
+        flex-direction: column;
+        .event-image {
+          padding: 15px;
+          margin-bottom: 1rem;
 
-        // padding: 0 0 10px 0;
-        // background: linear-gradient(
-        //   to right,
-        //   rgba(131, 58, 180, 1) 0%,
-        //   rgba(253, 29, 29, 1) 50%,
-        //   rgba(252, 176, 69, 1) 100%
-        // );
+          // padding: 0 0 10px 0;
+          // background: linear-gradient(
+          //   to right,
+          //   rgba(131, 58, 180, 1) 0%,
+          //   rgba(253, 29, 29, 1) 50%,
+          //   rgba(252, 176, 69, 1) 100%
+          // );
 
-        // &::after {
-        //   top: 100%;
-        //   left: 50%;
-        // }
-      }
-      .event-utils {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
+          // &::after {
+          //   top: 100%;
+          //   left: 50%;
+          // }
+        }
+        .event-utils {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
 
-        .event-date {
+          .event-date {
+            margin: 0;
+          }
+        }
+        .button {
           margin: 0;
         }
-      }
-      .button {
-        margin: 0;
       }
     }
   }
@@ -87,8 +90,6 @@
   }
 
   .aboutus {
-    // margin-top: 30px;
-    // height: 70vh;
     .row {
       display: flex;
       flex-direction: column;
@@ -98,6 +99,24 @@
         width: 60%;
         z-index: -1;
       }
+    }
+  }
+
+  .blog-page {
+    .blogs {
+      margin: 10px 0;
+      .blog-box {
+        margin: 10px 0;
+        .fs-3 {
+          font-size: 1.2rem !important;
+        }
+      }
+    }
+  }
+
+  .event-page {
+    .events {
+      margin: 10px 0;
     }
   }
 
@@ -111,6 +130,14 @@
       }
     }
 
+    .heading-area {
+      margin-top: 10px;
+      .heading {
+        font-size: 35px;
+        font-weight: 600;
+      }
+    }
+
     .event-page {
       .box {
         .event-image {
@@ -118,6 +145,14 @@
             aspect-ratio: 3/2;
           }
         }
+      }
+    }
+  }
+
+  .box {
+    .detail-box {
+      h4 {
+        font-size: 1.2rem;
       }
     }
   }
@@ -203,6 +238,53 @@
       .content-text {
         p {
           font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .detail-box {
+      width: 95%;
+      border-bottom: 1px solid #b0b0b0;
+      border-top: 1px solid #b0b0b0;
+      border-left: none;
+      border-right: none;
+    }
+    .date-box {
+      h3 {
+        span {
+          font-size: inherit;
+        }
+      }
+    }
+  }
+
+  .jobs-page {
+    .jobs {
+      margin: 10px 0;
+      align-items: center;
+
+      form {
+        width: 90%;
+        margin: 10px;
+        text-align: center;
+
+        .input-group {
+          width: 100%;
+          gap: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .form-control,
+          .form-select {
+            width: 100%;
+          }
         }
       }
     }

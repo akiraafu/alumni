@@ -12053,37 +12053,40 @@ a:focus {
 .upcoming-event {
   background-color: #eeeeee;
 }
-.upcoming-event .event-details .event-image {
+.upcoming-event .container {
+  padding: 0;
+}
+.upcoming-event .container .event-details .event-image {
   height: 100%;
   object-fit: cover;
   position: relative;
 }
-.upcoming-event .event-details .event-image .event-image-one {
+.upcoming-event .container .event-details .event-image .event-image-one {
   border-radius: 30% 70% 67% 33%/30% 30% 70% 70%;
   box-shadow: -5vmin 5vmin rgba(214, 143, 143, 0.2);
 }
-.upcoming-event .event-details .event-content a {
+.upcoming-event .container .event-details .event-content a {
   color: #212427;
 }
-.upcoming-event .event-details .event-content a:hover {
+.upcoming-event .container .event-details .event-content a:hover {
   color: #e45f2b;
 }
-.upcoming-event .event-details .event-content h2, .upcoming-event .event-details .event-content .h2 {
+.upcoming-event .container .event-details .event-content h2, .upcoming-event .container .event-details .event-content .h2 {
   line-height: 1.2;
   margin: 14px 0;
   font-size: 30px;
   text-transform: capitalize;
 }
-.upcoming-event .event-details .event-content p {
+.upcoming-event .container .event-details .event-content p {
   text-align: justify;
 }
-.upcoming-event .event-details .event-utils {
+.upcoming-event .container .event-details .event-utils {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: end;
 }
-.upcoming-event .event-details .event-utils .event-date {
+.upcoming-event .container .event-details .event-utils .event-date {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12094,25 +12097,25 @@ a:focus {
   gap: 0;
   text-align: center;
 }
-.upcoming-event .event-details .event-utils .event-date :first-child {
+.upcoming-event .container .event-details .event-utils .event-date :first-child {
   display: block;
   width: 70px;
   padding: 5px 10px 0 10px;
   font-weight: 600;
   font-size: 30px;
 }
-.upcoming-event .event-details .event-utils .event-date :nth-child(2) {
+.upcoming-event .container .event-details .event-utils .event-date :nth-child(2) {
   display: block;
   padding: 0 10px 5px 10px;
   width: 70px;
 }
-.upcoming-event .event-details .event-utils .event-date :nth-child(3) {
+.upcoming-event .container .event-details .event-utils .event-date :nth-child(3) {
   display: block;
   width: 70px;
   padding: 5px 12px;
   background: rgba(0, 0, 0, 0.3);
 }
-.upcoming-event .event-details .button {
+.upcoming-event .container .button {
   display: inline-block;
   padding: 20px 55px;
   background-color: #e45f2b;
@@ -12120,7 +12123,7 @@ a:focus {
   color: #f3f3f3 !important;
   margin-top: 35px;
 }
-.upcoming-event .event-details .button:hover {
+.upcoming-event .container .button:hover {
   background-color: transparent;
   color: #e45f2b !important;
 }
@@ -12329,6 +12332,9 @@ footer .copyright {
   margin-bottom: 0;
 }
 
+.heading-area {
+  margin-top: 48px;
+}
 .heading-area .heading {
   font-size: 50px;
   font-weight: 600;
@@ -12351,40 +12357,10 @@ footer .copyright {
 .blog-page .blogs .blog-box img {
   object-fit: cover;
 }
-.blog-page .blogs .blog-box .blog-details {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.blog-page .blogs .blog-box .blog-details .blog-info {
-  padding: 0;
-  border-right: 2px solid #212427;
-}
-.blog-page .blogs .blog-box .blog-details .blog-info p {
-  margin: 0;
-  width: 100%;
-  padding: 10px 20px;
-  text-align: center;
-  background-color: #212427;
-  color: #f3f3f3;
-}
-.blog-page .blogs .blog-box .blog-details .blog-info p:nth-child(2) {
-  background-color: #f3f3f3;
-  color: #212427;
-}
-.blog-page .blogs .blog-box .blog-details .blog-textbox {
-  width: 100%;
-  padding: 10px 20px;
-}
-.blog-page .blogs .blog-box .blog-details .blog-textbox .blog-title {
-  font-size: 24px;
-}
-.blog-page .blogs .blog-box .blog-details .blog-textbox .blog-excerpt {
-  text-align: justify;
-}
 
 .box {
   display: flex;
+  justify-content: center;
   align-items: center;
   border: 1px solid #cbcbcb;
   margin: 15px 0;
@@ -12431,13 +12407,20 @@ footer .copyright {
 .jobs-page .jobs {
   width: 100%;
   margin: 50px 0;
+  justify-content: center;
+  align-items: start;
 }
 .jobs-page .jobs form {
   width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .jobs-page .jobs form .input-group {
   width: 100%;
   gap: 10px;
+  display: flex;
+  justify-content: center;
 }
 .jobs-page .jobs .box {
   width: 90%;
@@ -12458,6 +12441,7 @@ footer .copyright {
   background-color: transparent;
   border-radius: 10px;
   padding: 10px 25px;
+  margin-bottom: 5px;
 }
 .jobs-page .jobs .box .date-box .button:hover {
   background-color: #e45f2b;
@@ -12584,7 +12568,6 @@ footer .copyright {
   position: absolute;
   bottom: 3%;
   font-size: 14px;
-  cursor: default;
 }
 .post-tagbox .post-tag {
   display: inline-block;
@@ -12633,22 +12616,25 @@ footer .copyright {
   .upcoming-event {
     width: 100%;
   }
-  .upcoming-event .event-details {
+  .upcoming-event .container {
+    padding: 0 48px;
+  }
+  .upcoming-event .container .event-details {
     flex-direction: column;
   }
-  .upcoming-event .event-details .event-image {
+  .upcoming-event .container .event-details .event-image {
     padding: 15px;
     margin-bottom: 1rem;
   }
-  .upcoming-event .event-details .event-utils {
+  .upcoming-event .container .event-details .event-utils {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
   }
-  .upcoming-event .event-details .event-utils .event-date {
+  .upcoming-event .container .event-details .event-utils .event-date {
     margin: 0;
   }
-  .upcoming-event .event-details .button {
+  .upcoming-event .container .event-details .button {
     margin: 0;
   }
   .detail-page .blog-content .content-info {
@@ -12677,14 +12663,36 @@ footer .copyright {
     width: 60%;
     z-index: -1;
   }
+  .blog-page .blogs {
+    margin: 10px 0;
+  }
+  .blog-page .blogs .blog-box {
+    margin: 10px 0;
+  }
+  .blog-page .blogs .blog-box .fs-3 {
+    font-size: 1.2rem !important;
+  }
+  .event-page .events {
+    margin: 10px 0;
+  }
   .sub-page .aboutus {
     height: 100vh;
   }
   .sub-page .aboutus .row .about-img {
     width: 70%;
   }
+  .sub-page .heading-area {
+    margin-top: 10px;
+  }
+  .sub-page .heading-area .heading {
+    font-size: 35px;
+    font-weight: 600;
+  }
   .sub-page .event-page .box .event-image img {
     aspect-ratio: 3/2;
+  }
+  .box .detail-box h4, .box .detail-box .h4 {
+    font-size: 1.2rem;
   }
   .detail-page .title-area {
     height: auto;
@@ -12741,6 +12749,42 @@ footer .copyright {
   }
   .detail-page .content-area .content-text p {
     font-size: 14px;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box .detail-box {
+    width: 95%;
+    border-bottom: 1px solid #b0b0b0;
+    border-top: 1px solid #b0b0b0;
+    border-left: none;
+    border-right: none;
+  }
+  .box .date-box h3 span, .box .date-box .h3 span {
+    font-size: inherit;
+  }
+  .jobs-page .jobs {
+    margin: 10px 0;
+    align-items: center;
+  }
+  .jobs-page .jobs form {
+    width: 90%;
+    margin: 10px;
+    text-align: center;
+  }
+  .jobs-page .jobs form .input-group {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .jobs-page .jobs form .input-group .form-control,
+  .jobs-page .jobs form .input-group .form-select {
+    width: 100%;
   }
   .newsletter {
     padding: 30px;
