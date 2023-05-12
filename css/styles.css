@@ -12360,7 +12360,7 @@ footer .copyright {
   justify-content: center;
   align-items: center;
   border: 1px solid #cbcbcb;
-  margin: 15px;
+  margin: 15px 0;
   border-radius: 5px;
 }
 .box > div {
@@ -12404,13 +12404,20 @@ footer .copyright {
 .jobs-page .jobs {
   width: 100%;
   margin: 50px 0;
+  justify-content: center;
+  align-items: start;
 }
 .jobs-page .jobs form {
   width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .jobs-page .jobs form .input-group {
   width: 100%;
   gap: 10px;
+  display: flex;
+  justify-content: center;
 }
 .jobs-page .jobs .box {
   width: 90%;
@@ -12431,6 +12438,7 @@ footer .copyright {
   background-color: transparent;
   border-radius: 10px;
   padding: 10px 25px;
+  margin-bottom: 5px;
 }
 .jobs-page .jobs .box .date-box .button:hover {
   background-color: #e45f2b;
@@ -12750,6 +12758,23 @@ footer .copyright {
   }
   .jobs-page .jobs {
     margin: 10px 0;
+    align-items: center;
+  }
+  .jobs-page .jobs form {
+    width: 90%;
+    margin: 10px;
+    text-align: center;
+  }
+  .jobs-page .jobs form .input-group {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .jobs-page .jobs form .input-group .form-control,
+  .jobs-page .jobs form .input-group .form-select {
+    width: 100%;
   }
   .newsletter {
     padding: 30px;

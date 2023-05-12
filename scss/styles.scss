@@ -616,7 +616,7 @@ footer {
   justify-content: center;
   align-items: center;
   border: 1px solid #cbcbcb;
-  margin: 15px;
+  margin: 15px 0;
   border-radius: 5px;
 
   > div {
@@ -672,13 +672,20 @@ footer {
   .jobs {
     width: 100%;
     margin: 50px 0;
+    justify-content: center;
+    align-items: start;
 
     form {
       width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .input-group {
         width: 100%;
         gap: 10px;
+        display: flex;
+        justify-content: center;
       }
     }
 
@@ -702,6 +709,7 @@ footer {
           background-color: transparent;
           border-radius: 10px;
           padding: 10px 25px;
+          margin-bottom: 5px;
 
           &:hover {
             background-color: $Orangeish-red;
