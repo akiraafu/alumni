@@ -22,36 +22,39 @@
 
   .upcoming-event {
     width: 100%;
-    .event-details {
-      flex-direction: column;
-      .event-image {
-        padding: 15px;
-        margin-bottom: 1rem;
+    .container {
+      padding: 0 48px;
+      .event-details {
+        flex-direction: column;
+        .event-image {
+          padding: 15px;
+          margin-bottom: 1rem;
 
-        // padding: 0 0 10px 0;
-        // background: linear-gradient(
-        //   to right,
-        //   rgba(131, 58, 180, 1) 0%,
-        //   rgba(253, 29, 29, 1) 50%,
-        //   rgba(252, 176, 69, 1) 100%
-        // );
+          // padding: 0 0 10px 0;
+          // background: linear-gradient(
+          //   to right,
+          //   rgba(131, 58, 180, 1) 0%,
+          //   rgba(253, 29, 29, 1) 50%,
+          //   rgba(252, 176, 69, 1) 100%
+          // );
 
-        // &::after {
-        //   top: 100%;
-        //   left: 50%;
-        // }
-      }
-      .event-utils {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
+          // &::after {
+          //   top: 100%;
+          //   left: 50%;
+          // }
+        }
+        .event-utils {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
 
-        .event-date {
+          .event-date {
+            margin: 0;
+          }
+        }
+        .button {
           margin: 0;
         }
-      }
-      .button {
-        margin: 0;
       }
     }
   }
