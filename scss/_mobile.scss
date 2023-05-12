@@ -87,8 +87,6 @@
   }
 
   .aboutus {
-    // margin-top: 30px;
-    // height: 70vh;
     .row {
       display: flex;
       flex-direction: column;
@@ -111,6 +109,13 @@
       }
     }
 
+    .heading-area {
+      .heading {
+        font-size: 35px;
+        font-weight: 600;
+      }
+    }
+
     .event-page {
       .box {
         .event-image {
@@ -118,6 +123,14 @@
             aspect-ratio: 3/2;
           }
         }
+      }
+    }
+  }
+
+  .box {
+    .detail-box {
+      h4 {
+        font-size: 1.2rem;
       }
     }
   }
@@ -205,6 +218,52 @@
           font-size: 14px;
         }
       }
+    }
+  }
+
+  .heading-area {
+    margin-top: 10px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .detail-box {
+      border-bottom: 1px solid #b0b0b0;
+      border-top: 1px solid #b0b0b0;
+      border-left: none;
+      border-right: none;
+    }
+    .date-box {
+      h3 {
+        span {
+          font-size: inherit;
+        }
+      }
+    }
+  }
+
+  .blog-page {
+    .blogs {
+      margin: 10px 0;
+      .blog-box {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .event-page {
+    .events {
+      margin: 10px 0;
+    }
+  }
+
+  .jobs-page {
+    .jobs {
+      margin: 10px 0;
     }
   }
 

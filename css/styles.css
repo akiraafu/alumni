@@ -12329,6 +12329,9 @@ footer .copyright {
   margin-bottom: 0;
 }
 
+.heading-area {
+  margin-top: 48px;
+}
 .heading-area .heading {
   font-size: 50px;
   font-weight: 600;
@@ -12351,43 +12354,13 @@ footer .copyright {
 .blog-page .blogs .blog-box img {
   object-fit: cover;
 }
-.blog-page .blogs .blog-box .blog-details {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.blog-page .blogs .blog-box .blog-details .blog-info {
-  padding: 0;
-  border-right: 2px solid #212427;
-}
-.blog-page .blogs .blog-box .blog-details .blog-info p {
-  margin: 0;
-  width: 100%;
-  padding: 10px 20px;
-  text-align: center;
-  background-color: #212427;
-  color: #f3f3f3;
-}
-.blog-page .blogs .blog-box .blog-details .blog-info p:nth-child(2) {
-  background-color: #f3f3f3;
-  color: #212427;
-}
-.blog-page .blogs .blog-box .blog-details .blog-textbox {
-  width: 100%;
-  padding: 10px 20px;
-}
-.blog-page .blogs .blog-box .blog-details .blog-textbox .blog-title {
-  font-size: 24px;
-}
-.blog-page .blogs .blog-box .blog-details .blog-textbox .blog-excerpt {
-  text-align: justify;
-}
 
 .box {
   display: flex;
+  justify-content: center;
   align-items: center;
   border: 1px solid #cbcbcb;
-  margin: 15px 0;
+  margin: 15px;
   border-radius: 5px;
 }
 .box > div {
@@ -12584,7 +12557,6 @@ footer .copyright {
   position: absolute;
   bottom: 3%;
   font-size: 14px;
-  cursor: default;
 }
 .post-tagbox .post-tag {
   display: inline-block;
@@ -12683,8 +12655,15 @@ footer .copyright {
   .sub-page .aboutus .row .about-img {
     width: 70%;
   }
+  .sub-page .heading-area .heading {
+    font-size: 35px;
+    font-weight: 600;
+  }
   .sub-page .event-page .box .event-image img {
     aspect-ratio: 3/2;
+  }
+  .box .detail-box h4, .box .detail-box .h4 {
+    font-size: 1.2rem;
   }
   .detail-page .title-area {
     height: auto;
@@ -12741,6 +12720,36 @@ footer .copyright {
   }
   .detail-page .content-area .content-text p {
     font-size: 14px;
+  }
+  .heading-area {
+    margin-top: 10px;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box .detail-box {
+    border-bottom: 1px solid #b0b0b0;
+    border-top: 1px solid #b0b0b0;
+    border-left: none;
+    border-right: none;
+  }
+  .box .date-box h3 span, .box .date-box .h3 span {
+    font-size: inherit;
+  }
+  .blog-page .blogs {
+    margin: 10px 0;
+  }
+  .blog-page .blogs .blog-box {
+    margin: 10px 0;
+  }
+  .event-page .events {
+    margin: 10px 0;
+  }
+  .jobs-page .jobs {
+    margin: 10px 0;
   }
   .newsletter {
     padding: 30px;

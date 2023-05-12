@@ -541,6 +541,7 @@ footer {
 }
 
 .heading-area {
+  margin-top: 48px;
   .heading {
     font-size: 50px;
     font-weight: 600;
@@ -563,61 +564,59 @@ footer {
     margin: 50px 0;
 
     .blog-box {
-      // max-width: 1000px;
       margin: 30px 0;
 
       img {
-        // aspect-ratio: 2/3;
         object-fit: cover;
       }
 
-      .blog-details {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        // flex-wrap: wrap;
+      // .blog-details {
+      //   display: flex;
+      //   align-items: flex-start;
+      //   justify-content: space-between;
 
-        .blog-info {
-          padding: 0;
-          border-right: 2px solid $VeryDark-Gray;
+      //   .blog-info {
+      //     padding: 0;
+      //     border-right: 2px solid $VeryDark-Gray;
 
-          p {
-            margin: 0;
-            width: 100%;
-            padding: 10px 20px;
-            text-align: center;
-            background-color: $VeryDark-Gray;
-            color: $Pearl-White;
+      //     p {
+      //       margin: 0;
+      //       width: 100%;
+      //       padding: 10px 20px;
+      //       text-align: center;
+      //       background-color: $VeryDark-Gray;
+      //       color: $Pearl-White;
 
-            &:nth-child(2) {
-              background-color: $Pearl-White;
-              color: $VeryDark-Gray;
-            }
-          }
-        }
+      //       &:nth-child(2) {
+      //         background-color: $Pearl-White;
+      //         color: $VeryDark-Gray;
+      //       }
+      //     }
+      //   }
 
-        .blog-textbox {
-          width: 100%;
-          padding: 10px 20px;
+      //   .blog-textbox {
+      //     width: 100%;
+      //     padding: 10px 20px;
 
-          .blog-title {
-            font-size: 24px;
-          }
+      //     .blog-title {
+      //       font-size: 24px;
+      //     }
 
-          .blog-excerpt {
-            text-align: justify;
-          }
-        }
-      }
+      //     .blog-excerpt {
+      //       text-align: justify;
+      //     }
+      //   }
+      // }
     }
   }
 }
 
 .box {
   display: flex;
+  justify-content: center;
   align-items: center;
   border: 1px solid #cbcbcb;
-  margin: 15px 0;
+  margin: 15px;
   border-radius: 5px;
 
   > div {
@@ -636,6 +635,7 @@ footer {
       object-fit: cover;
     }
   }
+
   .detail-box {
     border-left: 1px solid #b0b0b0;
     border-right: 1px solid #b0b0b0;
@@ -866,7 +866,7 @@ footer {
   position: absolute;
   bottom: 3%;
   font-size: 14px;
-  cursor: default;
+  // cursor: default;
   // user-select: none;
   // pointer-events: none;
 
