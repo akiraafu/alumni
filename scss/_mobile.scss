@@ -102,6 +102,24 @@
     }
   }
 
+  .blog-page {
+    .blogs {
+      margin: 10px 0;
+      .blog-box {
+        margin: 10px 0;
+        .fs-3 {
+          font-size: 1.2rem !important;
+        }
+      }
+    }
+  }
+
+  .event-page {
+    .events {
+      margin: 10px 0;
+    }
+  }
+
   .sub-page {
     .aboutus {
       height: 100vh;
@@ -113,6 +131,7 @@
     }
 
     .heading-area {
+      margin-top: 10px;
       .heading {
         font-size: 35px;
         font-weight: 600;
@@ -224,10 +243,6 @@
     }
   }
 
-  .heading-area {
-    margin-top: 10px;
-  }
-
   .box {
     display: flex;
     flex-direction: column;
@@ -235,6 +250,7 @@
     align-items: center;
 
     .detail-box {
+      width: 95%;
       border-bottom: 1px solid #b0b0b0;
       border-top: 1px solid #b0b0b0;
       border-left: none;
@@ -246,21 +262,6 @@
           font-size: inherit;
         }
       }
-    }
-  }
-
-  .blog-page {
-    .blogs {
-      margin: 10px 0;
-      .blog-box {
-        margin: 10px 0;
-      }
-    }
-  }
-
-  .event-page {
-    .events {
-      margin: 10px 0;
     }
   }
 

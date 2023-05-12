@@ -12663,11 +12663,26 @@ footer .copyright {
     width: 60%;
     z-index: -1;
   }
+  .blog-page .blogs {
+    margin: 10px 0;
+  }
+  .blog-page .blogs .blog-box {
+    margin: 10px 0;
+  }
+  .blog-page .blogs .blog-box .fs-3 {
+    font-size: 1.2rem !important;
+  }
+  .event-page .events {
+    margin: 10px 0;
+  }
   .sub-page .aboutus {
     height: 100vh;
   }
   .sub-page .aboutus .row .about-img {
     width: 70%;
+  }
+  .sub-page .heading-area {
+    margin-top: 10px;
   }
   .sub-page .heading-area .heading {
     font-size: 35px;
@@ -12735,9 +12750,6 @@ footer .copyright {
   .detail-page .content-area .content-text p {
     font-size: 14px;
   }
-  .heading-area {
-    margin-top: 10px;
-  }
   .box {
     display: flex;
     flex-direction: column;
@@ -12745,6 +12757,7 @@ footer .copyright {
     align-items: center;
   }
   .box .detail-box {
+    width: 95%;
     border-bottom: 1px solid #b0b0b0;
     border-top: 1px solid #b0b0b0;
     border-left: none;
@@ -12752,15 +12765,6 @@ footer .copyright {
   }
   .box .date-box h3 span, .box .date-box .h3 span {
     font-size: inherit;
-  }
-  .blog-page .blogs {
-    margin: 10px 0;
-  }
-  .blog-page .blogs .blog-box {
-    margin: 10px 0;
-  }
-  .event-page .events {
-    margin: 10px 0;
   }
   .jobs-page .jobs {
     margin: 10px 0;
