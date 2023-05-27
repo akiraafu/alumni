@@ -675,23 +675,28 @@ footer {
     margin: 50px 0;
     justify-content: center;
     align-items: start;
+  .widget-area{
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+    // form {
+    //   width: 90%;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
 
-    form {
-      width: 90%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .input-group {
-        width: 100%;
-        gap: 10px;
-        display: flex;
-        justify-content: center;
-      }
-    }
+    //   .input-group {
+    //     width: 100%;
+    //     gap: 10px;
+    //     display: flex;
+    //     justify-content: center;
+    //   }
+    // }
 
     .box {
-      width: 90%;
+      width: 100%;
       height: auto;
 
       img {
@@ -879,7 +884,8 @@ footer {
   // user-select: none;
   // pointer-events: none;
 
-  .post-tag {
+  .post-tag,
+  a {
     display: inline-block;
     background: #f7dbdb;
     color: #777;
