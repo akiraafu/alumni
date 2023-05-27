@@ -97,7 +97,8 @@ a:focus {
   align-items: flex-end;
   color: #fff;
 
-  h3 {
+  h3,
+  .logo {
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
@@ -331,17 +332,17 @@ a:focus {
       padding: 0 10px;
     }
 
-    #scrollbar::-webkit-scrollbar {
+    .scrollbar::-webkit-scrollbar {
       width: 10px;
     }
 
-    #scrollbar::-webkit-scrollbar-track {
+    .scrollbar::-webkit-scrollbar-track {
       border-radius: 8px;
       background-color: #e7e7e7;
       border: 1px solid #cacaca;
     }
 
-    #scrollbar::-webkit-scrollbar-thumb {
+    .scrollbar::-webkit-scrollbar-thumb {
       border-radius: 8px;
       background-color: rgba(22, 22, 22, 0.15);
     }
@@ -607,7 +608,7 @@ footer {
     flex: 1.4;
     padding: 10px 0;
 
-    h4 {
+    .event-title {
       width: 100%;
       font-weight: bold;
       text-transform: capitalize;
@@ -639,6 +640,7 @@ footer {
     margin: 50px 0;
     justify-content: center;
     align-items: start;
+    
   .widget-area{
     width: 100%;
     margin-bottom: 1.2rem;
@@ -647,20 +649,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) ;
   }
-    // form {
-    //   width: 90%;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-
-    //   .input-group {
-    //     width: 100%;
-    //     gap: 10px;
-    //     display: flex;
-    //     justify-content: center;
-    //   }
-    // }
-
+   
     .box {
       width: 100%;
       height: auto;
@@ -864,7 +853,7 @@ footer {
     padding: 0 10px 0 23px;
     position: relative;
     margin-right: 20px;
-    cursor: default;
+    cursor: pointer;
     user-select: none;
     transition: color 0.2s;
     margin-bottom: 5px;
