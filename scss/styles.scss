@@ -572,44 +572,6 @@ footer {
       img {
         object-fit: cover;
       }
-
-      // .blog-details {
-      //   display: flex;
-      //   align-items: flex-start;
-      //   justify-content: space-between;
-
-      //   .blog-info {
-      //     padding: 0;
-      //     border-right: 2px solid $VeryDark-Gray;
-
-      //     p {
-      //       margin: 0;
-      //       width: 100%;
-      //       padding: 10px 20px;
-      //       text-align: center;
-      //       background-color: $VeryDark-Gray;
-      //       color: $Pearl-White;
-
-      //       &:nth-child(2) {
-      //         background-color: $Pearl-White;
-      //         color: $VeryDark-Gray;
-      //       }
-      //     }
-      //   }
-
-      //   .blog-textbox {
-      //     width: 100%;
-      //     padding: 10px 20px;
-
-      //     .blog-title {
-      //       font-size: 24px;
-      //     }
-
-      //     .blog-excerpt {
-      //       text-align: justify;
-      //     }
-      //   }
-      // }
     }
   }
 }
@@ -679,9 +641,11 @@ footer {
     align-items: start;
   .widget-area{
     width: 100%;
-    background-color: #f0f0f0;
+    margin-bottom: 1.2rem;
+    background-color:#f8f9fa;
     padding: 10px 20px;
     border-radius: 10px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) ;
   }
     // form {
     //   width: 90%;
@@ -883,8 +847,8 @@ footer {
 }
 
 .post-tagbox {
-  position: absolute;
-  bottom: 3%;
+
+  bottom: 2px;
   font-size: 14px;
   // cursor: default;
   // user-select: none;
@@ -903,6 +867,7 @@ footer {
     cursor: default;
     user-select: none;
     transition: color 0.2s;
+    margin-bottom: 5px;
 
     &::before {
       content: "";
@@ -927,5 +892,28 @@ footer {
     }
   }
 }
+
+.paginate {
+  display: inline-block;
+  margin: 20px auto;
+  .page-numbers  {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    &:hover:not(.current){background-color: #ddd;}
+  }
+  .page-numbers.current {
+    background-color: $Orangeish-red;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  
+}
+
+
+
 
 @import "mobile";
