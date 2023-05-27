@@ -30,8 +30,10 @@ a:focus {
   padding: 15px 55px;
   background-color: $Orangeish-red;
   border: 1px solid $Orangeish-red;
+  border-radius: 0.375rem;
   color: $Pearl-White !important;
   transition: all ease-in-out 300ms;
+
 
   &:hover {
     background-color: transparent;
@@ -855,8 +857,12 @@ footer {
         }
 
         .detail-box {
-          width: 80%;
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
           border: none;
+          gap:1.5rem;
           h4 {
             margin: 0;
           }
