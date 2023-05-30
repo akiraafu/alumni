@@ -41,6 +41,27 @@ a:focus {
   }
 }
 
+#backToTop{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  background-color: $Orangeish-red;
+  opacity: 0.8;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #777;
+  }
+}
+
 .tag {
   color: #555;
 }
@@ -776,10 +797,10 @@ footer {
     }
 
     .content-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: flex-start;
 
       p {
         line-height: 150%;
@@ -790,6 +811,7 @@ footer {
 
       img {
         margin: 20px 0;
+      
       }
     }
   }
